@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex: 0 1 25%;
+    min-height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    background-color: #355c7d;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 15%;
+    max-width: 500px;
+}
+
+/* #display {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 500px;
+    padding: 10px;
+    background-color: #68343c;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px 0px#000;
+    -moz-box-shadow: 1px 1px 1px 0px#000;
+    box-shadow: 1px 1px 1px 0px#000;
+
+} */
+
+#display {
+    display: flex;
+    flex: 0 1 100%;
+    min-height: 50px;
+    min-width: 550px;
+    border-radius: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 75px;
+    padding: 10px;
+    background: #6c5b7b;
+    color: #fff;
+    -webkit-box-shadow: inset 1px 1px 1px 0px #fffefe;
+    -moz-box-shadow: inset 1px 1px 1px 0px #fffefe;
+    box-shadow: inset 1px 1px 1px 0px #fffefe;
+}
+
+#buttons {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    min-width: 550px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: #f8b195;
+    -webkit-box-shadow: inset 1px 1px 1px 0px #fffefe;
+    -moz-box-shadow: inset 1px 1px 1px 0px #fffefe;
+    box-shadow: inset 1px 1px 1px 0px #fffefe;
+}
+
+#number {
+    display: flex;
+    flex: 0 1 15%;
+    background-color: #510a32;
+    font-size: 50px;
+    min-width: 50px;
+    padding: 10px;
+    margin: 2px;
+    color: #f8b195;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 1px 0px #fffefe;
+
+}
+
+#operator {
+    font-size: 50px;
+    min-width: 50px;
+    padding: 10px;
+    background-color: #f67280;
+    color: #f2e4e6;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 1px 0px #fffefe;
+}
+
+#regop {
+    font-size: 50px;
+    padding: 10px;
+    background-color: #c06c84;
+    margin: 2px;
+    color: #f2e4e6;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 1px 0px #fffefe;
+}
+
+#zero {
+    flex: 0 2 100%;
+    max-width: 243px;
+    padding-left: 2px;
+    justify-content: space-between;
+    background-color: #c06c84;
+    box-shadow: inset 1px 1px 1px 0px #fffefe;
+
+}

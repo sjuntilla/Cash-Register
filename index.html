@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <title>a cute cash register</title>
+</head>
+
+<body>
+
+    <div id='container'>
+        <div id='register'>
+            <div id='display'>0</div>
+            <div id='buttons'>
+                <span>
+                    <div id='number'>7</div>
+                    <div id='number'>6</div>
+                    <div id='number'>3</div>
+                    <div id='regop'>0</div>
+                </span>
+                <span>
+                    <div id='number'>8</div>
+                    <div id='number'>5</div>
+                    <div id='number'>2</div>
+                    <div id='regop'>00</div>
+                </span>
+                <span>
+                    <div id='number'>9</div>
+                    <div id='number'>4</div>
+                    <div id='number'>1</div>
+                    <div id='operator'>.</div>
+                </span>
+                <span>
+                    <div id='number'>÷</div>
+                    <div id='number'>x</div>
+                    <div id='number'>-</div>
+                    <div id='operator'>+</div>
+                </span>
+                <span>
+                    <div id='number' class='clear'>clear</div>
+                    <div id='number' class='balance'>balance</div>
+                    <div id='number' class='deposit'>deposit</div>
+                    <div id='operator' class='withdraw'>withdraw</div>
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <script src='js/calculator.js'></script>
+    <script src='js/cash_register.js'></script>
+</body>
+
+</html>
