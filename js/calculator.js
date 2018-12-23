@@ -1,87 +1,58 @@
-    const buttonPress = document.getElementsByClassName('number');
-    for (var i = 0; i < buttonPress.length; i++) {
-        buttonPress[i].addEventListener('click', printResult);
-    }
+  function calculatorModule() {
+      var memory = 0;
+      var total = 0;
+      var clear = '';
 
-    function printResult() {
+      var load = function (x) {
+          total = x;
+          return total;
+      }
 
-    }
+      var add = function (x, y) {
+          total = x + y;
+          return total;
+      }
 
+      var subtract = function (x, y) {
+          total = x - y;
+          return total;
+      }
 
-    var calculatorModule = function () {
-        var memory = 0;
-        var total = 0;
+      var multiply = function (x, y) {
+          total = x * y;
+          return total;
+      }
 
-        var load = function (num) {
-            if (typeof num === 'number') {
-                total = num;
-                return num;
-            } else {
-                return null;
-            }
-        }
-        var getTotal = function () {
-            if (typeof total === 'number') {
-                return total;
-            }
-        }
+      var divide = function (x, y) {
+          total = x / y;
+          return total;
+      }
 
-        var add = function (num) {
-            if (typeof num === 'number') {
-                return total += num;
-            } else {
-                throw error;
-            }
-        }
+      var recallMemory = function () {
+          return memory;
+      }
 
-        var subtract = function (num) {
-            if (typeof num === 'number') {
-                return total -= num;
-            } else {
-                throw error;
-            }
-        }
+      var saveMemory = function () {
+          memory += total;
+          return clear;
 
-        var multiply = function (num) {
-            if (typeof num === 'number') {
-                return total *= num;
-            } else {
-                throw error;
-            }
-        }
+      }
 
-        var divide = function (num) {
-            if (typeof num === 'number') {
-                return total /= num;
-            } else {
-                throw error;
-            }
-        }
+      var clearMemory = function (num) {
+          memory -= total;
+          return memory;
+      }
 
-        var recallMemory = function () {
-            return memory;
-        }
-
-        var saveMemory = function () {
-            memory = total;
-
-        }
-
-        var clearMemory = function (num) {
-            memory = 0;
-        }
-
-        return {
-            load,
-            getTotal,
-            add,
-            subtract,
-            multiply,
-            divide,
-            recallMemory,
-            saveMemory,
-            clearMemory
-        }
+      return {
+          load: load,
+          add: add,
+          subtract: subtract,
+          multiply: multiply,
+          divide: divide,
+          recallMemory: recallMemory,
+          saveMemory: saveMemory,
+          clearMemory: clearMemory
+      };
 
 
-    }
+  }

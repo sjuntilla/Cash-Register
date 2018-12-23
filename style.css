@@ -64,7 +64,7 @@ body {
     box-shadow: inset 1px 1px 1px 0px #fffefe;
 }
 
-#number {
+.number {
     display: flex;
     flex: 0 1 15%;
     background-color: #510a32;
@@ -78,7 +78,7 @@ body {
 
 }
 
-#operator {
+.operator {
     font-size: 50px;
     min-width: 50px;
     padding: 10px;
@@ -88,7 +88,7 @@ body {
     box-shadow: inset 1px 1px 1px 0px #fffefe;
 }
 
-#regop {
+.regop {
     font-size: 50px;
     padding: 10px;
     background-color: #c06c84;
@@ -98,7 +98,7 @@ body {
     box-shadow: inset 1px 1px 1px 0px #fffefe;
 }
 
-#zero {
+.zero {
     flex: 0 2 100%;
     max-width: 243px;
     padding-left: 2px;
