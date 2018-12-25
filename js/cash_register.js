@@ -106,3 +106,66 @@ function ninthButton() {
     display.innerHTML = numDisplay;
     add += '9';
 }
+
+// OPERATOR BUTTONS
+divide.addEventListener('click', divButton)
+
+function divButton() {
+    numDisplay += '÷';
+    display.innerHTML = numDisplay;
+    add = '';
+    curr += '÷';
+}
+
+multiply.addEventListener('click', multButton)
+
+function multButton() {
+    numDisplay += 'x';
+    display.innerHTML = numDisplay;
+    add = '';
+    curr += 'x';
+}
+
+minus.addEventListener('click', subButton)
+
+function subButton() {
+    numDisplay += '-';
+    display.innerHTML = numDisplay;
+    add = '';
+    curr += '-';
+}
+
+plus.addEventListener('click', addButton)
+
+function addButton() {
+    numDisplay += '+';
+    display.innerHTML = numDisplay;
+    add = '';
+    curr += '+';
+}
+
+// CLEAR/WITHDRAW/BALANCE/DEPOSIT
+clear.addEventListener('click', clearDisp);
+
+function clearDisp() {
+    numDisplay = calcMod.clearMemory();
+    display.innerHTML = numDisplay;
+}
+deposit.addEventListener('click', makeDeposit);
+
+function makeDeposit() {
+    numDisplay = calcMod.saveMemory();
+    display.innerHTML = numDisplay;
+}
+
+withdraw.addEventListener('click', withdrawBal)
+
+function withdrawBal() {
+    numDisplay = calcMod.clearMemory();
+    display.innerHTML = numDisplay;
+}
+balance.addEventListener('click', showBal);
+
+function showBal() {
+    numDisplay = calcMod.recallMemory();
+}
