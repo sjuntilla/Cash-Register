@@ -189,8 +189,9 @@ function withdrawBal() {
     numDisplay = calcMod.withdrawMem();
     display.innerHTML = calcMod.clearMemory();
 }
-balance.addEventListener('click', showBal);
+balance.addEventListener('click', getBal);
 
-function showBal() {
+function getBal() {
     numDisplay = calcMod.recallMemory();
+    display.innerHTML = numDisplay;
 }

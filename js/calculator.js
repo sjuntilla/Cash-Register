@@ -55,7 +55,9 @@
           divide: divide,
           recallMemory: recallMemory,
           saveMemory: saveMemory,
-          clearMemory: clearMemory
+          clearMemory: clearMemory,
+          withdrawMem: withdrawMem
+
       };
 
 
