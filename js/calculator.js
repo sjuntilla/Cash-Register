@@ -3,28 +3,28 @@
       var total = 0;
       var clear = '';
 
-      var load = function (x) {
-          total = x;
+      var load = function (curr) {
+          total = curr;
           return total;
       }
 
-      var add = function (x, y) {
-          total = x + y;
+      var add = function (curr, add) {
+          total = curr + add;
           return total;
       }
 
-      var subtract = function (x, y) {
-          total = x - y;
+      var subtract = function (curr, add) {
+          total = curr - add;
           return total;
       }
 
-      var multiply = function (x, y) {
-          total = x * y;
+      var multiply = function (curr, add) {
+          total = curr * add;
           return total;
       }
 
-      var divide = function (x, y) {
-          total = x / y;
+      var divide = function (curr, add) {
+          total = curr / add;
           return total;
       }
 
@@ -38,7 +38,11 @@
 
       }
 
-      var clearMemory = function (num) {
+      var clearMemory = function () {
+          return clear;
+      }
+
+      var withdrawMem = function () {
           memory -= total;
           return memory;
       }
