@@ -33,7 +33,7 @@
       }
 
       var saveMemory = function () {
-          memory += total;
+          memory = memory += total;
           return clear;
 
       }
@@ -43,8 +43,8 @@
       }
 
       var withdrawMem = function () {
-          memory = memory - total;
-          return memory;
+          total = memory -= curr;
+          return total;
       }
 
       return {
