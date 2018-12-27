@@ -39,6 +39,7 @@
       }
 
       var clearMemory = function () {
+          total = '';
           return clear;
       }
 

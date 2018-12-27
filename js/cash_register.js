@@ -166,10 +166,8 @@ function equate() {
     } else if (opEvent === '÷') {
         result = calcMod.divide(second, first);
         display.innerHTML = result;
-    } else if (typeof result === 'number') {
-        result = first;
-        display.innerHTML = result;
     }
+
 }
 
 // CLEAR/WITHDRAW/BALANCE/DEPOSIT
