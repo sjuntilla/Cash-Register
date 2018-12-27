@@ -43,7 +43,7 @@
       }
 
       var withdrawMem = function () {
-          memory -= total;
+          memory = memory - total;
           return memory;
       }
 
