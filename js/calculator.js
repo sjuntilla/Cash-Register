@@ -44,9 +44,10 @@
       }
 
       var withdrawMem = function () {
-          total = memory -= curr;
-          return total;
+          memory = memory -= total;
+          return clear;
       }
+
 
       return {
           load: load,

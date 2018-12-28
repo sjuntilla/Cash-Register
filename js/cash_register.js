@@ -4,108 +4,122 @@ let curr = ''; // first value of any given equation
 let add = ''; //second value of any given equation
 let opEvent = ''; // denotes type of operator being called upon
 
-
+const nums = document.querySelectorAll('.number');
+const ops = document.querySelectorAll('.operator');
 const display = document.querySelector('#display'); // display box
 display.innerHTML = result; // ensures that the display box shows resulting number from user input
 
+// FOR LOOP FOR BUTTON CLICKS!
+for (var i = 0; i < nums.length; i++) {
+    nums[i].addEventListener('click', numberClick);
 
+    function numberClick(val) {
+        const mVal = val.target.innerHTML;
+        result += mVal;
+        display.innerHTML = result;
+        curr += mVal;
+    }
+}
+
+// First attempt-- writing the same code over and over is gross
 // ZEROES + DECIMAL
-zero.addEventListener('click', zeroOne);
+// zero.addEventListener('click', zeroOne);
 
-function zeroOne() {
-    result += '0';
-    display.innerHTML = result;
-    curr += '0';
-}
+// function zeroOne() {
+//     result += '0';
+//     display.innerHTML = result;
+//     curr += '0';
+// }
 
-doubleoh.addEventListener('click', zeroTwo);
+// doubleoh.addEventListener('click', zeroTwo);
 
-function zeroTwo() {
-    result += '00';
-    display.innerHTML = result;
-    curr += '00';
-}
-dot.addEventListener('click', dotDisp);
+// function zeroTwo() {
+//     result += '00';
+//     display.innerHTML = result;
+//     curr += '00';
+// }
+// dot.addEventListener('click', dotDisp);
 
-function dotDisp() {
-    result += '.';
-    display.innerHTML = result;
-    curr += '.';
-}
+// function dotDisp() {
+//     result += '.';
+//     display.innerHTML = result;
+//     curr += '.';
+// }
 
-// NUMBER BUTTONS
+// // NUMBER BUTTONS
 
-one.addEventListener('click', firstButton);
+// one.addEventListener('click', firstButton);
 
-function firstButton() {
-    result += '1';
-    display.innerHTML = result;
-    curr += '1';
-}
+// function firstButton() {
+//     result += '1';
+//     display.innerHTML = result;
+//     curr += '1';
+// }
 
-two.addEventListener('click', secondButton);
+// two.addEventListener('click', secondButton);
 
-function secondButton() {
-    result += '2';
-    display.innerHTML = result;
-    curr += '2';
-}
+// function secondButton() {
+//     result += '2';
+//     display.innerHTML = result;
+//     curr += '2';
+// }
 
-three.addEventListener('click', thirdButton);
+// three.addEventListener('click', thirdButton);
 
-function thirdButton() {
-    result += '3';
-    display.innerHTML = result;
-    curr += '3';
-}
+// function thirdButton() {
+//     result += '3';
+//     display.innerHTML = result;
+//     curr += '3';
+// }
 
-four.addEventListener('click', fourthButton);
+// four.addEventListener('click', fourthButton);
 
-function fourthButton() {
-    result += '4';
-    display.innerHTML = result;
-    curr += '4';
-}
+// function fourthButton() {
+//     result += '4';
+//     display.innerHTML = result;
+//     curr += '4';
+// }
 
-five.addEventListener('click', fifthButton);
+// five.addEventListener('click', fifthButton);
 
-function fifthButton() {
-    result += '5';
-    display.innerHTML = result;
-    curr += '5';
-}
+// function fifthButton() {
+//     result += '5';
+//     display.innerHTML = result;
+//     curr += '5';
+// }
 
-six.addEventListener('click', sixthButton);
+// six.addEventListener('click', sixthButton);
 
-function sixthButton() {
-    result += '6';
-    display.innerHTML = result;
-    curr += '6';
-}
+// function sixthButton() {
+//     result += '6';
+//     display.innerHTML = result;
+//     curr += '6';
+// }
 
-seven.addEventListener('click', seventhButton);
+// seven.addEventListener('click', seventhButton);
 
-function seventhButton() {
-    result += '7';
-    display.innerHTML = result;
-    curr += '7';
-}
+// function seventhButton() {
+//     result += '7';
+//     display.innerHTML = result;
+//     curr += '7';
+// }
 
-eight.addEventListener('click', eighthButton);
+// eight.addEventListener('click', eighthButton);
 
-function eighthButton() {
-    result += '8';
-    display.innerHTML = result;
-    curr += '8';
-}
+// function eighthButton() {
+//     result += '8';
+//     display.innerHTML = result;
+//     curr += '8';
+// }
 
-nine.addEventListener('click', ninthButton);
+// nine.addEventListener('click', ninthButton);
 
-function ninthButton() {
-    result += '9';
-    display.innerHTML = result;
-    curr += '9';
-}
+// function ninthButton() {
+//     result += '9';
+//     display.innerHTML = result;
+//     curr += '9';
+// }
+
 
 // OPERATOR BUTTONS
 divide.addEventListener('click', divButton)
@@ -166,6 +180,9 @@ function equate() {
     } else if (opEvent === '÷') {
         result = calcMod.divide(second, first);
         display.innerHTML = result;
+    } else if (opEvent === '=') {
+        result = calcMod.equal(first);
+        display.innerHTML = result;
     }
 
 }
@@ -188,7 +205,7 @@ withdraw.addEventListener('click', withdrawBal)
 
 function withdrawBal() {
     result = calcMod.withdrawMem();
-    display.innerHTML = calcMod.clearMemory();
+    display.innerHTML = calcMod.recallMemory();
 }
 balance.addEventListener('click', getBal);
 

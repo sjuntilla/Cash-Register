@@ -8,14 +8,15 @@ body {
     background: url('https://i.imgur.com/nplSbGX.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 #title {
     font-family: 'VT323', monospace;
     font-size: 75px;
-    color: #feebcc;
-    text-shadow: 2px 2px#000;
+    color: #c68446;
+    text-shadow: 1px 1px 1px #623b26;
+    background-clip: text;
 
 }
 
@@ -53,9 +54,9 @@ body {
     align-items: center;
     font-size: 75px;
     padding: 10px;
-    background: #cb5623;
+    background: #a87239;
     margin-bottom: 3px;
-    color: #fff;
+    color: #eebc8d;
     box-shadow: 2px 2px #000;
     text-shadow: 2px 2px #000;
 }
